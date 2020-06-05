@@ -55,8 +55,6 @@ class RungeKutte:
         self.K44 = 0
         self.y1 = 0
 
-        self.isStart = True
-
     def step(self, u, U):
         result = False
 
@@ -105,6 +103,8 @@ class RungeKutte:
                     self.h = self.signum * self.h_min
                 elif abs(self.h) > self.h_max:
                     self.h = self.signum * self.h_max
+            else:
+                self.h = 1.5 * self.h
 
             if self.signum * (self.B - (self.x0 + self.h)) < self.h_min:
                 if self.signum * (self.B - self.x0) >= 2 * self.h_min:

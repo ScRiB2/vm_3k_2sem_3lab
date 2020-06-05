@@ -79,7 +79,7 @@ def test3():
     rk = RungeKutte(A, B, C, yC, h_min, h_max, EPS)
     print('   X		              Y		           EPS		        IER         h')
     EndCalc = False
-    while (not EndCalc):
+    while not EndCalc:
         EndCalc = rk.step(u, U)
 
     print('Общее количество точек: ' + str(rk.count))
@@ -108,7 +108,7 @@ def test4():
     rk = RungeKutte(A, B, C, yC, h_min, h_max, EPS)
     print('   X		              Y		           EPS		        IER         h')
     EndCalc = False
-    while (not EndCalc):
+    while not EndCalc:
         EndCalc = rk.step(u, U)
 
     print('Общее количество точек: ' + str(rk.count))
@@ -117,5 +117,5 @@ def test4():
     print('Количество точек, в которых не достигается заданная точность: ' + str(rk.count_IER_1))
 
 
-test4()
+test2()
 
